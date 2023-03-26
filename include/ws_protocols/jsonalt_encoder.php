@@ -6,6 +6,8 @@
 // | file that was distributed with this source code.                      |
 // +-----------------------------------------------------------------------+
 
+require_once "include/ws_protocols/json_encoder.php";
+
 class PwgJsonEncoder extends PwgJsonEncoder
 {
   function getContentType()
