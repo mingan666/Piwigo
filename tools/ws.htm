@@ -21,16 +21,16 @@
 
 <div id="the_body">
   <a name="top"></a>
-  
+
   <i class="darkModeButton icon-moon-inv" title="Toogle Dark Mode"></i>
 
   <div id="the_header">
     <a title="Go to admin page" href="../admin.php"><img src="ws/piwigo-logo-minimal.svg"></a>
     <h1>Piwigo web API (web-services) explorer</h1>
   </div> <!-- the_header -->
-  
+
   <div id="the_container">
-  
+
     <div id="the_methods">
       <h2>Available methods</h2>
 
@@ -38,25 +38,25 @@
         <i class="icon-search"></i>
         <input type="text" placeholder="Search">
       </div>
-  
+
       <div id="methodsList">
-        
+
       </div>
     </div> <!-- the_methods -->
-  
+
     <div id="the_page">
       <div id="the_title">
         <h2 id="methodName" style="display:none;"></h2>
         <span id="onlys"></span>
       </div>
       <h2 id="errorWrapper" style="display:none;"></h2>
-  
+
       <div id="the_content">
         <form id="urlForm" style="display:none;">
           <input type="text" name="ws_url" size="60">
           <input type="submit" value="Go!">
         </form>
-  
+
         <div class="card" id="introMessage">
           <h3 class="card-title"><i class="icon-info-circled-1"></i>What is this page ?</h3>
           <div class="card-content">
@@ -64,34 +64,34 @@
               <b>API = Application Programming Interface.</b><br>
               This is the way other applications can communicate with Piwigo. This feature is also know as Web Services.
             </p>
-    
+
             <p>Examples:</p>
             <ul>
               <li>Wordpress (web blog software) can display random photos from a Piwigo gallery in its sidebar</li>
               <li>Lightroom (photo management software for desktop) can create albums and upload photos to Piwigo</li>
             </ul>
-    
+
             <p>
               This page lists all API methods available on your Piwigo installation, part of the Piwigo core or added by third-party plugins.
               For each method you can consult required and optional parameters, and even test them in direct live!
             </p>
-    
+
             <p>
               For more information you can consult our Wiki <a href="http://piwigo.org/doc/doku.php?id=dev:webapi:start" target="_blank">Piwigo Web API</a> and <a href="http://piwigo.org/forum" target="_blank">our forums</a>.
             </p>
           </div>
         </div> <!-- introMessage -->
-  
-  
+
+
         <form id="methodWrapper" style="display:none;">
           <div class="card" id="methodDescription" style="display:none;">
             <h3 class="card-title"><i class="icon-book"></i>Description</h3>
             <blockquote>
             </blockquote>
           </div> <!-- methodDescription -->
-          
+
           <div id="methodControl">
-            
+
             <div class="methodControlContainer">
               <div class="card" id="methodParams">
                 <h3 class="card-title"><i class="icon-equalizer"></i>Method parameters</h3>
@@ -105,7 +105,7 @@
                         <td class="mini">Send</td>
                       </tr>
                     </thead>
-                    
+
                     <tbody>
                     </tbody>
                   </table>
@@ -113,12 +113,12 @@
                 </div>
               </div> <!-- methodParams -->
             </div> <!-- methodControlContainer -->
-  
+
             <div class="methodControlContainer">
               <div class="card" id="testForm">
                 <h3 class="card-title"><i class="icon-wrench"></i>Test</h3>
                 <div class="card-content">
-    
+
                   <div class="select-group">
                     <label for='requestFormat'>Request format</label>
                     <div class="select">
@@ -128,19 +128,20 @@
                       </select>
                     </div>
                   </div>
-    
+
                   <div class='select-group'>
                     <label for='responseFormat'>Response format</label>
                     <div class="select">
                       <select id="responseFormat">
-                        <option value="json" selected>JSON</option>
+                        <option value="json" selected>JSON (text/plain)</option>
+                        <option value="jsonalt" selected>JSON (application/json)</option>
                         <option value="rest" selected>REST (xml)</option>
                         <option value="php">PHP serial</option>
                         <option value="xmlrpc">XML RPC</option>
                       </select>
                     </div>
                   </div>
-    
+
                   <div class="testAction">
                     <a href="#iframe-bottom" class="button" id="invokeMethod">INVOKE</a>
                     <a href="#" class="button" id="invokeMethodBlank">INVOKE (new window)</a>
@@ -148,9 +149,9 @@
                 </div>
               </div> <!-- testForm -->
             </div> <!-- methodControlContainer -->
-  
+
           </div> <!-- methodControl -->
-          
+
           <div class="card-2" id="requestURLDisplay" style="display:none;">
             <h3 class="card-title"><i class="icon-network"></i>Request</h3>
             <div class="card-content">
@@ -160,7 +161,7 @@
               </blockquote>
             </div>
           </div> <!-- requestDisplay -->
-  
+
           <div class="card-2" id="requestResultDisplay" style="display:none;">
             <h3 class="card-title"><i class="icon-code"></i>Result</h3>
             <div class="card-content">
@@ -176,16 +177,16 @@
             </div>
           </div>
         </form> <!-- resultWrapper -->
-  
+
         <!-- hidden form for POST submition -->
         <form method="post" action="" target="" id="invokeForm" style="display:none;"></form>
-  
+
       </div> <!-- the_content -->
-  
-    </div> <!-- the_page --> 
-  
-  </div> <!-- the_container --> 
-  
+
+    </div> <!-- the_page -->
+
+  </div> <!-- the_container -->
+
   <div id="the_footer">
     Copyright &copy; 2002-2021 <a href="http://piwigo.org">Piwigo Team</a>
   </div> <!-- the_footer -->
